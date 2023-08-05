@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    background: rgb(1, 1, 1);
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sword{
+    height: 200px;
+    width: 20px;
+    background: #20cbff;
+    border-top-right-radius: 150%;
+    box-shadow: 0px 0px 70px 5px #00c3ff;
+    animation: sword 1s ease-in-out infinite;
+    transform-origin: bottom;
+    position: relative;
+    margin: 60px;
+}
+
+
+.sword::before{
+    content: '';
+    height: 10px;
+    width: 70px;
+    background: gold;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.two{
+    border-top-left-radius: 150%;
+    animation: sword2 1s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+
+
+.handle{
+    width: 14px;
+    height: 50px;
+    background: brown;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.handle::before{
+    content: '';
+    width: 20px;
+    height: 10px;
+    background: gold;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line{
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.line:nth-child(1){
+    top: 10%;
+}
+.line:nth-child(2){
+    top: 30%;
+}
+.line:nth-child(3){
+    top: 50%;
+}
+.line:nth-child(4){
+    top: 70%;
+}
+
+
+@keyframes sword {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(60deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+@keyframes sword2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-60deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
